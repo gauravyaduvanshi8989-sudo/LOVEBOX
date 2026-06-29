@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LoveBox ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="title">❤️ LoveBox ❤️</div>
+        <div class="status" id="onlineBadge">🟢 Checking...</div>
+    </div>
+
+    <div class="infoPanel">
+        <div class="info" id="lidStatus">📦 LoveBox : Closed</div>
+        <div class="info" id="last-seen-display">🕒 Box Last Seen: ...</div>
+    </div>
+
+    <div id="typing" class="typing">❤️ Waiting...</div>
+
+    <div class="controlPanel">
+        <button class="controlBtn" onclick="triggerHardwareBeep()" style="background: #e67e22;">🔊 Beep</button>
+        <button class="controlBtn" onclick="triggerTitanicTheme()" style="background: #3498db;">🎵 Titanic</button>
+        <button class="controlBtn heartBtn" onclick="spinHeart()">❤️ Spin</button>
+        <button class="controlBtn sleepBtn" onclick="toggleSleepMode()">🔋 Sleep</button>
+        <button class="controlBtn restartBtn" onclick="restartBox()">⚙️ Reboot</button>
+    </div>
+
+    <div id="chatBox" class="chatBox"></div>
+
+    <div class="actionPanel">
+        <span class="battery" id="batteryDisplay">🔋 Battery: --%</span>
+        <span class="clearHistory" onclick="clearChat()">🗑️ Clear Chat</span>
+    </div>
+
+    <div class="bottom">
+        <input id="message" type="text" placeholder="Type your message...">
+        <button onclick="sendMessage()">➤</button>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+<audio id="notifSound" src="https://assets.mixkit.co/active_storage/sfx/2357/2357-84.wav" preload="auto"></audio>
+<script src="script.js"></script>
+</body>
+</html>
